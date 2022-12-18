@@ -5,6 +5,7 @@ This is a sample so that I can commit this to the GitHub.
 ## 1. Question
 
 初項a{1}, 第二項a{2}, 項数N が与えられる。その二項を用いたフィボナッチ数列を表示するプログラムを組め。
+ただし異常系は考慮しないものとする。
 
 ## 2. Conditions
 
