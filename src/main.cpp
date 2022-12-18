@@ -47,18 +47,29 @@ namespace Util{
 
 
 namespace Original{
-    std::vector<int> CreateArithmeticProgression( int a1, int n, int d ){
-        std::vector<int> progression( n );
-        progression[0] = a1;
-        for( int i = 1; i < n; i++ ){
-            progression[i] = progression[0] + (((i+1) - 1) * d);
+    std::vector<int> CreateFibonacciSequence( int n, int a1, int a2 ){
+        std::vector<int> sequence( n );
+
+        sequence[0] = a1;
+        sequence[1] = a2;
+
+        for( int i = 2; i < n; i++ ){
+            sequence[i] = sequence[i - 1] + sequence[i - 2];
         }
-    return progression;
+    return sequence;
     }
 }
 
-
 int main( int argc, char** argv ){
-    
+    int n, a1, a2;
+    cin >> n >> a1 >> a2;
+
+    auto fibonacci = Original::CreateFibonacciSequence( n, a1, a2 );
+
+    for( int i = 0; i < n; i++ ){
+        cout << fibonacci[i] << flush;
+        if( i != n - 1 ) cout << " " << flush;
+    }
+    cout << endl;
 return 0;
 }
